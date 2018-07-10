@@ -37,7 +37,15 @@ public class ElementsTest {
 			Color expected = Color.red;
 			assertEquals(expected,element.getColor());
 			
+			
 		} 
+		
+		/**
+		 * Test for setting the color
+		 * 
+		 * 
+		 */
+		
 		@Test
 		public void testsetColor() {
 			Color expected = Color.blue;
