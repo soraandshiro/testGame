@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class Rider extends Elements implements IRider , IElements{
 	private Direction direction;
-	public ArrayList<IElements> particles = new ArrayList<IElements>();
+	public ArrayList<IElements> TabElem = new ArrayList<IElements>();
 	boolean alive = true;
 	public MapCase grid;
 
@@ -35,7 +35,7 @@ public Rider(int x, int y, Color color , Direction direction,MapCase grid) {
  * @see model.IRider#move()
  */
 public void move() {
-	this.particles.add(0, new Line(this.x, this.y, this.color));
+	this.TabElem.add(0, new Line(this.x, this.y, this.color));
 	switch(this.direction) {
 	case EST: this.x=x+1;
 		break;
@@ -83,7 +83,7 @@ public void setAlive(boolean alive) {
 @Override
 public ArrayList<IElements> getParticles() {
 	// TODO Auto-generated method stub
-	return particles;
+	return TabElem;
 }
 /**
  * (non-Javadoc)

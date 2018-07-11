@@ -20,7 +20,7 @@ public abstract class Main {
     	final ITronModel model = new TronModel();
     	//on set la grid
     	model.setGrid(new MapCase());
-    	//on charge la cue avec la model
+    	//on charge la vue avec le model
     	final IView view = new Frame(model);	
     	//et on charge le controller
     	IController game = new TronControl(model, view);

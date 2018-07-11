@@ -21,7 +21,7 @@ public class MapCase implements IMapCase{
 	private int width = 600;
 	private int height = 400;
 	private int nbCellulsHeight=40;
-	private int nbCelsWidth=60;
+	private int nbCellulsWidth=60;
 	private ITimer timer;
 	private DataDAO db = new DataDAO();
 
@@ -29,8 +29,8 @@ public class MapCase implements IMapCase{
 	
 
 	/**
-	 * Costructor
-	 * set 2 rider on the grid
+	 * Constructor
+	 * set 2 rider on the map
 	 */
 	public MapCase () {
 		this.rider1= new Rider(2,2,Color.red,Direction.EST,this);
@@ -40,14 +40,14 @@ public class MapCase implements IMapCase{
 	}
 	
 	/**
-	 * Check colision for a rider
-	 * checkif rider is in colision
+	 * Check collision for a rider
+	 * check if rider is in collision
 	 * @param rider
-	 * @return boolean colision
+	 * @return boolean collision
 	 * 
 	 */
 	public boolean checkColision(Rider rider) {
-		if(rider.getX()>this.nbCelsWidth || rider.getX()<=0 || rider.getY()<=0 || rider.getY()>this.nbCellulsHeight) {rider.setAlive(false); return true;} 
+		if(rider.getX()>this.nbCellulsWidth || rider.getX()<=0 || rider.getY()<=0 || rider.getY()>this.nbCellulsHeight) {rider.setAlive(false); return true;} 
 		
 		for (IElements particle : rider1.getParticles()) {
 			if(rider.getX() == particle.getX() && rider.getY() == particle.getY()) {rider.setAlive(false);return true;}
@@ -139,12 +139,12 @@ public class MapCase implements IMapCase{
 	 */
 	@Override
 	public int getNbCelsWidth() {
-		return nbCelsWidth;
+		return nbCellulsWidth;
 	}
 
 
 	public void setNbCelsWidth(int nbCelsWidth) {
-		this.nbCelsWidth = nbCelsWidth;
+		this.nbCellulsWidth = nbCelsWidth;
 	}
 	@Override
 	public ITimer getTimer() {
