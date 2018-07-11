@@ -12,7 +12,7 @@ public interface IMapCase {
 	/**
 	 * get nb cels height
 	 */
-	public int getNbCelsHeight();
+	public int getNbCellulsHeight();
 	/**
 	 * get nb cels width
 	 */

@@ -22,7 +22,7 @@ public abstract class Main {
     	model.setGrid(new MapCase());
     	//on charge la cue avec la model
     	final IView view = new Frame(model);	
-    	//et on charge le controler
+    	//et on charge le controller
     	IController game = new TronControl(model, view);
     	//on lance le jeu
     	game.play();

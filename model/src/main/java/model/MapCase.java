@@ -20,7 +20,7 @@ public class MapCase implements IMapCase{
 	private IRider rider2;
 	private int width = 600;
 	private int height = 400;
-	private int nbCelsHeight=40;
+	private int nbCellulsHeight=40;
 	private int nbCelsWidth=60;
 	private ITimer timer;
 	private DataDAO db = new DataDAO();
@@ -47,7 +47,7 @@ public class MapCase implements IMapCase{
 	 * 
 	 */
 	public boolean checkColision(Rider rider) {
-		if(rider.getX()>this.nbCelsWidth || rider.getX()<=0 || rider.getY()<=0 || rider.getY()>this.nbCelsHeight) {rider.setAlive(false); return true;} 
+		if(rider.getX()>this.nbCelsWidth || rider.getX()<=0 || rider.getY()<=0 || rider.getY()>this.nbCellulsHeight) {rider.setAlive(false); return true;} 
 		
 		for (IElements particle : rider1.getParticles()) {
 			if(rider.getX() == particle.getX() && rider.getY() == particle.getY()) {rider.setAlive(false);return true;}
@@ -122,16 +122,16 @@ public class MapCase implements IMapCase{
 	}
 	/**
 	 * (non-Javadoc)
-	 * @see model.IMapCase#getNbCelsHeight()
+	 * @see model.IMapCase#getNbCellulsHeight()
 	 */
 	@Override
-	public int getNbCelsHeight() {
-		return nbCelsHeight;
+	public int getNbCellulsHeight() {
+		return nbCellulsHeight;
 	}
 
 
 	public void setNbCelsHeight(int nbCelsHeight) {
-		this.nbCelsHeight = nbCelsHeight;
+		this.nbCellulsHeight = nbCelsHeight;
 	}
 	/**
 	 * (non-Javadoc)

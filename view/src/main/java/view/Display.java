@@ -45,18 +45,18 @@ public class Display extends JPanel implements Observer {
 		g.setColor(model.getGrid().getRider1().getColor());
 		g.fillRect(
 				model.getGrid().getRider1().getX()*model.getGrid().getWidth()/model.getGrid().getNbCelsWidth(),
-				model.getGrid().getRider1().getY()*model.getGrid().getHeight()/model.getGrid().getNbCelsHeight(),
+				model.getGrid().getRider1().getY()*model.getGrid().getHeight()/model.getGrid().getNbCellulsHeight(),
 				model.getGrid().getWidth()/model.getGrid().getNbCelsWidth(),
-				model.getGrid().getHeight()/model.getGrid().getNbCelsHeight()
+				model.getGrid().getHeight()/model.getGrid().getNbCellulsHeight()
 				
 				);
 		//Rider2
 		g.setColor(model.getGrid().getRider2().getColor());
 		g.fillRect(
 				model.getGrid().getRider2().getX()*model.getGrid().getWidth()/model.getGrid().getNbCelsWidth(),
-				model.getGrid().getRider2().getY()*model.getGrid().getHeight()/model.getGrid().getNbCelsHeight(),
+				model.getGrid().getRider2().getY()*model.getGrid().getHeight()/model.getGrid().getNbCellulsHeight(),
 				model.getGrid().getWidth()/model.getGrid().getNbCelsWidth(),
-				model.getGrid().getHeight()/model.getGrid().getNbCelsHeight()
+				model.getGrid().getHeight()/model.getGrid().getNbCellulsHeight()
 				
 				);
 		
