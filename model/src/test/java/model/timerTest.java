@@ -16,7 +16,7 @@ public class timerTest {
 
 	@Test
 	public void testGetTime() {
-		float expected = 5;
+		int expected = 5;
 		tooLong.setTime(5);
 		assertEquals(expected, tooLong.getTime());
 		

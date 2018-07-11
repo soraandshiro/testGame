@@ -38,7 +38,7 @@ import model.ITronBDDConector;
 	 /**
 	 * Instantiates a new Tron BDD connector.
 	 */
-	 private TronBDDConnector() {
+	 TronBDDConnector() {
 	 this.open();
 	 
 	 }
@@ -150,7 +150,7 @@ import model.ITronBDDConector;
 	 *
 	 * @return the connection
 	 */
-	 private Connection getConnection() {
+	 Connection getConnection() {
 		 return this.connection;
 	 
 	 }
@@ -171,7 +171,7 @@ import model.ITronBDDConector;
 	 *
 	 * @return the statement
 	 */
-	 private Statement getStatement() {
+	 Statement getStatement() {
 		 return this.statement;
 	 
 	 }
