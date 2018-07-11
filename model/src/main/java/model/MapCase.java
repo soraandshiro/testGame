@@ -33,8 +33,8 @@ public class MapCase implements IMapCase{
 	 * set 2 rider on the map
 	 */
 	public MapCase () {
-		this.rider1= new Rider(2,2,Color.red,Direction.EST,this);
-		this.rider2= new Rider(30,30,Color.cyan,Direction.OUEST,this);
+		this.rider1= new Rider(2,2,Color.orange,Direction.RIGHT,this);
+		this.rider2= new Rider(30,30,Color.cyan,Direction.LEFT,this);
 		this.timer= new timer();
 		timer.start();
 	}
@@ -130,28 +130,30 @@ public class MapCase implements IMapCase{
 	}
 
 
-	public void setNbCelsHeight(int nbCelsHeight) {
-		this.nbCellulsHeight = nbCelsHeight;
+	public void setNbCellulsHeight(int nbCellulsHeight) {
+		this.nbCellulsHeight = nbCellulsHeight;
 	}
 	/**
 	 * (non-Javadoc)
-	 * @see model.IMapCase#getNbCelsWidth()
+	 * @see model.IMapCase#getNbCellulsWidth()
 	 */
 	@Override
-	public int getNbCelsWidth() {
+	public int getNbCellulsWidth() {
 		return nbCellulsWidth;
 	}
 
 
-	public void setNbCelsWidth(int nbCelsWidth) {
-		this.nbCellulsWidth = nbCelsWidth;
+	public void setNbCellulsWidth(int nbCellulsWidth) {
+		this.nbCellulsWidth = nbCellulsWidth;
 	}
+	
 	@Override
 	public ITimer getTimer() {
 		return timer;
 	}
+	
 	@Override
-	public void save() {
+	public void saveData() {
 		
 		if(rider1.isAlive()) {
 			db.save(2, (int) timer.getTime());}

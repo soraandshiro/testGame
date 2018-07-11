@@ -19,7 +19,7 @@ public abstract class Main {
     	// on charge le model
     	final ITronModel model = new TronModel();
     	//on set la grid
-    	model.setGrid(new MapCase());
+    	model.setGrille(new MapCase());
     	//on charge la vue avec le model
     	final IView view = new Frame(model);	
     	//et on charge le controller

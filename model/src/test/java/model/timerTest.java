@@ -19,7 +19,7 @@ public class timerTest {
 		int expected = 5;
 		tooLong.setTime(5);
 		assertEquals(expected, tooLong.getTime());
-		
+		System.out.println(tooLong);
 	}
 
 }

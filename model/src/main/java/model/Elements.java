@@ -9,6 +9,7 @@ import java.awt.Color;
 import java.util.Observable;
 
 
+@SuppressWarnings("deprecation")
 public class Elements extends Observable implements IElements{
 	
 	public Elements(int x, int y, Color color) {

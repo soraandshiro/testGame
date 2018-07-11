@@ -20,7 +20,7 @@ public class RiderTest {
 	
 	@Before
 	public void setUp() throws Exception {
-		joueur = new Rider(10, 12, Color.red, Direction.NORD, rider1 );
+		joueur = new Rider(10, 12, Color.red, Direction.TOP, rider1 );
 	}
 	
 	/**

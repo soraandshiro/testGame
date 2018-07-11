@@ -6,21 +6,23 @@ package model;
  * @version 1.0
  */
 public class TronModel implements ITronModel{
-	private IMapCase grid;
-	/**
-	 * 
+	
+	private IMapCase grille;
+	
+	/** 
 	 * (non-Javadoc)
-	 * @see model.ITronModel#getGrid()
+	 * @see model.ITronModel#getGrille()
 	 */
-	public IMapCase getGrid() {
-		return grid;
+	public IMapCase getGrille() {
+		return grille;
 	}
+	
 	/**
 	 * (non-Javadoc)
-	 * @see model.ITronModel#setGrid(model.IMapCase)
+	 * @see model.ITronModel#setGrille(model.IMapCase)
 	 */
-	public void setGrid(IMapCase grid) {
-		this.grid = grid;
+	public void setGrille(IMapCase grille) {
+		this.grille = grille;
 	}
 
 	

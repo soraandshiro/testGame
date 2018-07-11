@@ -39,25 +39,25 @@ public class TronControl implements IController {
 	
 	public void play(){
 		// tant que les deux joueurs de sont pas morts
-		while(model.getGrid().getRider1().isAlive() && model.getGrid().getRider2().isAlive()) {
+		while(model.getGrille().getRider1().isAlive() && model.getGrille().getRider2().isAlive()) {
 			//on bouge le rider 1
-			model.getGrid().getRider1().move();
+			model.getGrille().getRider1().move();
 			//si il est mort 
-			if(model.getGrid().getRider1().isAlive() == false) {
+			if(model.getGrille().getRider1().isAlive() == false) {
 				//on affiche le message
-				model.getGrid().getTimer().stop();
-				model.getGrid().save();
-				this.view.displayMessage("Rider 2 Win (Blue) Win in "+model.getGrid().getTimer().getTime()+" Seconds");
+				model.getGrille().getTimer().stop();
+				model.getGrille().saveData();
+				this.view.displayMessage("Rider 2 Win (Blue) Win in "+model.getGrille().getTimer().getTime()+" Seconds");
 			}
 			
 			
 			
 			// pareil pour le rider 2
-			model.getGrid().getRider2().move();
-			if(model.getGrid().getRider2().isAlive() == false) {
-				model.getGrid().getTimer().stop();
-				model.getGrid().save();
-				this.view.displayMessage("Rider 1 Win (Red) Win in"+model.getGrid().getTimer().getTime()+" Seconds");
+			model.getGrille().getRider2().move();
+			if(model.getGrille().getRider2().isAlive() == false) {
+				model.getGrille().getTimer().stop();
+				model.getGrille().saveData();
+				this.view.displayMessage("Rider 1 Win (Red) Win in"+model.getGrille().getTimer().getTime()+" Seconds");
 			
 			}
 			

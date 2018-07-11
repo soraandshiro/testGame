@@ -16,7 +16,7 @@ public interface IMapCase {
 	/**
 	 * get nb cels width
 	 */
-	public int getNbCelsWidth();
+	public int getNbCellulsWidth();
 	/**
 	 * get the width
 	 */
@@ -37,7 +37,7 @@ public interface IMapCase {
 	public ITimer getTimer();
 	
 	
-	public void save();
+	public void saveData();
 	
 	
 

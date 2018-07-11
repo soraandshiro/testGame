@@ -29,6 +29,11 @@ public class timer implements ITimer{
 		return this.time;
 	}
 
+	/**
+	 * 
+	 * permet de faire le test
+	 * @param i
+	 */
 	public void setTime(int i) {
 		// TODO Auto-generated method stub
 		

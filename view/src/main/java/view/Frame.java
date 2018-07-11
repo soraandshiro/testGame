@@ -8,34 +8,21 @@ package view;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.WindowEvent;
-
-
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-
 import model.ITronModel;
+
 
 public class Frame extends JFrame implements KeyListener, IView {
 	
 	/** The serial version. */
 	private static final long serialVersionUID = -7393744101067014109L;
-	
 	/** The width of the frame. */
 	private int width;
-	
 	/** The height of the frame. */
 	private int height;
-	
-	
-	private Display display;
-	
-
+	private Panel panelFct;
 	private ITronModel model;
-	
-	
-	
- 	
- 	
  	
 	
 	/**
@@ -45,13 +32,14 @@ public class Frame extends JFrame implements KeyListener, IView {
 	 * 			the model
 	 */
 	public Frame(ITronModel model) {
-		this.model = model;
-		this.width=model.getGrid().getWidth();
-		this.height=model.getGrid().getHeight();
 		
-		this.display = new Display(this.model);
+		this.model = model;
+		this.width=model.getGrille().getWidth();
+		this.height=model.getGrille().getHeight();
+		this.panelFct = new Panel(this.model);
+		
 		this.setTitle("Tron");
-	    this.setContentPane(this.display);
+	    this.setContentPane(this.panelFct);
 	    this.setSize(width, height);
 		this.setLocationRelativeTo(null);
 		this.setResizable(false);
@@ -69,12 +57,14 @@ public class Frame extends JFrame implements KeyListener, IView {
 	 */
 	@Override
   	public final void keyPressed(final KeyEvent keyEvent) {
-  	switch(keyEvent.getKeyCode()) {
-  	case KeyEvent.VK_RIGHT: model.getGrid().getRider1().turnRight();System.out.println("1r");break;
-  	case KeyEvent.VK_LEFT: model.getGrid().getRider1().turnLeft();System.out.println("1l");break;
-  	case KeyEvent.VK_D: model.getGrid().getRider2().turnRight();System.out.println("2r");break;
-  	case KeyEvent.VK_Q: model.getGrid().getRider2().turnLeft();System.out.println("2l");break;
-  	default:break;
+		
+		switch(keyEvent.getKeyCode()) {
+  	
+			case KeyEvent.VK_RIGHT: model.getGrille().getRider1().turnRight();System.out.println("1r");break;
+			case KeyEvent.VK_LEFT: model.getGrille().getRider1().turnLeft();System.out.println("1l");break;
+			case KeyEvent.VK_D: model.getGrille().getRider2().turnRight();System.out.println("2r");break;
+			case KeyEvent.VK_Q: model.getGrille().getRider2().turnLeft();System.out.println("2l");break;
+		default:break;
   	
   	
   	
@@ -93,7 +83,7 @@ public class Frame extends JFrame implements KeyListener, IView {
 	 * Repaint the components.
 	 */ 
 	public void repaint() {
-		this.display.repaint();
+		this.panelFct.repaint();
 		
 	}
 
@@ -103,8 +93,8 @@ public class Frame extends JFrame implements KeyListener, IView {
 	 * 
 	 * @return the display
 	 */
-	public Display getDisplay() {
-		return display;
+	public Panel getDisplay() {
+		return panelFct;
 		
 	}
 	
@@ -158,8 +148,8 @@ public class Frame extends JFrame implements KeyListener, IView {
 	 * 			the display to set
 	 */
 	
-	public void setDisplay(Display Display) {
-		this.display = Display;
+	public void setDisplay(Panel Display) {
+		this.panelFct = Display;
 		
 	}
 
@@ -183,10 +173,4 @@ public class Frame extends JFrame implements KeyListener, IView {
 		// TODO Auto-generated method stub
 		
 	}
-	
-	
-	
-	
-	
-	
 }

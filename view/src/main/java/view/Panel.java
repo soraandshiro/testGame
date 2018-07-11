@@ -10,13 +10,16 @@ import java.awt.Graphics;
 import java.io.IOException;
 import java.util.Observable;
 import java.util.Observer;
-
 import javax.swing.JPanel;
-
 import model.IElements;
 import model.ITronModel;
 
-public class Display extends JPanel implements Observer {
+
+
+@SuppressWarnings("deprecation")
+
+public class Panel extends JPanel implements Observer {
+	
 	/** The serial version. */
 	private static final long serialVersionUID = 1L;
 	
@@ -24,14 +27,14 @@ public class Display extends JPanel implements Observer {
 	private ITronModel model;
 	
 	
-	public Display(ITronModel model) {
+	public Panel(ITronModel model) {
 		this.setBackground(Color.BLACK);
 		this.setVisible(true);
 		System.out.println("Affichage");
 		this.model = model;
 		
-		model.getGrid().getRider1().addObserver(this);
-		model.getGrid().getRider2().addObserver(this);
+		model.getGrille().getRider1().addObserver(this);
+		model.getGrille().getRider2().addObserver(this);
 		
 		
 		
@@ -42,34 +45,34 @@ public class Display extends JPanel implements Observer {
 		
 		
 		//Rider1
-		g.setColor(model.getGrid().getRider1().getColor());
+		g.setColor(model.getGrille().getRider1().getColor());
 		g.fillRect(
-				model.getGrid().getRider1().getX()*model.getGrid().getWidth()/model.getGrid().getNbCelsWidth(),
-				model.getGrid().getRider1().getY()*model.getGrid().getHeight()/model.getGrid().getNbCellulsHeight(),
-				model.getGrid().getWidth()/model.getGrid().getNbCelsWidth(),
-				model.getGrid().getHeight()/model.getGrid().getNbCellulsHeight()
+				model.getGrille().getRider1().getX()*model.getGrille().getWidth()/model.getGrille().getNbCellulsWidth(),
+				model.getGrille().getRider1().getY()*model.getGrille().getHeight()/model.getGrille().getNbCellulsHeight(),
+				model.getGrille().getWidth()/model.getGrille().getNbCellulsWidth(),
+				model.getGrille().getHeight()/model.getGrille().getNbCellulsHeight()
 				
 				);
 		//Rider2
-		g.setColor(model.getGrid().getRider2().getColor());
+		g.setColor(model.getGrille().getRider2().getColor());
 		g.fillRect(
-				model.getGrid().getRider2().getX()*model.getGrid().getWidth()/model.getGrid().getNbCelsWidth(),
-				model.getGrid().getRider2().getY()*model.getGrid().getHeight()/model.getGrid().getNbCellulsHeight(),
-				model.getGrid().getWidth()/model.getGrid().getNbCelsWidth(),
-				model.getGrid().getHeight()/model.getGrid().getNbCellulsHeight()
+				model.getGrille().getRider2().getX()*model.getGrille().getWidth()/model.getGrille().getNbCellulsWidth(),
+				model.getGrille().getRider2().getY()*model.getGrille().getHeight()/model.getGrille().getNbCellulsHeight(),
+				model.getGrille().getWidth()/model.getGrille().getNbCellulsWidth(),
+				model.getGrille().getHeight()/model.getGrille().getNbCellulsHeight()
 				
 				);
 		
 		
 		
 		//Rider1 particles
-		for (IElements element : model.getGrid().getRider1().getParticles()) {
-			g.setColor(model.getGrid().getRider1().getColor());
+		for (IElements element : model.getGrille().getRider1().getParticles()) {
+			g.setColor(model.getGrille().getRider1().getColor());
 			g.fillRect(element.getX()*10, element.getY()*10, 10, 10);
 		}
 		// rider 2 particles
-		for (IElements element : model.getGrid().getRider2().getParticles()) {
-			g.setColor(model.getGrid().getRider2().getColor());
+		for (IElements element : model.getGrille().getRider2().getParticles()) {
+			g.setColor(model.getGrille().getRider2().getColor());
 			g.fillRect(element.getX()*10, element.getY()*10, 10, 10);
 		}
 		

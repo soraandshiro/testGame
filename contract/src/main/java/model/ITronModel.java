@@ -9,9 +9,9 @@ public interface ITronModel {
 	/**
 	 * get the grid
 	 */
-	public IMapCase getGrid();
+	public IMapCase getGrille();
 	/**
 	 * set the grid
 	 */
-	public void setGrid(IMapCase grid);
+	public void setGrille(IMapCase grid);
 }

@@ -37,13 +37,13 @@ public Rider(int x, int y, Color color , Direction direction,MapCase grid) {
 public void move() {
 	this.TabElem.add(0, new Line(this.x, this.y, this.color));
 	switch(this.direction) {
-	case EST: this.x=x+1;
+	case RIGHT: this.x=x+1;
 		break;
-	case NORD: this.y=y-1;
+	case TOP: this.y=y-1;
 		break;
-	case OUEST: this.x=x-1;
+	case LEFT: this.x=x-1;
 		break;
-	case SUD: this.y=y+1;
+	case BOT: this.y=y+1;
 		break;
 	default:
 		break;
@@ -92,10 +92,10 @@ public ArrayList<IElements> getParticles() {
 @Override
 public void turnRight() {
 	switch(this.direction) {
-	case NORD: direction = Direction.EST;break;
-	case EST: direction = Direction.SUD;break;
-	case SUD: direction = Direction.OUEST;break;
-	case OUEST: direction = Direction.NORD;break;
+	case TOP: direction = Direction.RIGHT;break;
+	case RIGHT: direction = Direction.BOT;break;
+	case BOT: direction = Direction.LEFT;break;
+	case LEFT: direction = Direction.TOP;break;
 	}
 	
 }
@@ -106,10 +106,10 @@ public void turnRight() {
 @Override
 public void turnLeft() {
 		switch(this.direction) {
-		case NORD: direction = Direction.OUEST;break;
-		case EST: direction = Direction.NORD;break;
-		case SUD: direction = Direction.EST;break;
-		case OUEST: direction = Direction.SUD;break;
+		case TOP: direction = Direction.LEFT;break;
+		case RIGHT: direction = Direction.TOP;break;
+		case BOT: direction = Direction.RIGHT;break;
+		case LEFT: direction = Direction.BOT;break;
 		}
 	
 }
