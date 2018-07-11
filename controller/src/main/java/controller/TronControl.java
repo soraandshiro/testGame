@@ -1,7 +1,7 @@
 package controller;
 
 /**
- * <h1>The Contrller Class</h1>
+ * <h1>The Controller Class</h1>
  * 
  * @author Max Keller
  * @version 1.0

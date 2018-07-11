@@ -2,7 +2,7 @@ package model;
 /**
  * <h1>The Rider (lightcycle) Interface</h1>
  * 
- * @author Roxane-Vonarb
+ * @author Max Keller
  * @version 1.0
  */
 import java.util.ArrayList;

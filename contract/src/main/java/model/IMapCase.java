@@ -5,7 +5,7 @@ package model;
 /**
  * <h1>The Grid Interface</h1>
  * 
- * @author Roxane-Vonarb
+ * @author Max Keller
  * @version 1.0
  */
 public interface IMapCase {

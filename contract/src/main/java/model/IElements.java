@@ -2,7 +2,7 @@ package model;
 /**
  * <h1>The  Element Interface</h1>
  * 
- * @author Roxane-Vonarb
+ * @author Max Keller
  * @version 1.0
  */
 import java.awt.Color;

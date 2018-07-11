@@ -15,11 +15,11 @@ public class DataDAO extends AbstractDAO{
 	private final static String sqlGetMapByID ="{call insertdata(?,?)}";
 
 
-	public void save(int player , float time){
+	public void save(int player , double time){
 		final CallableStatement callStatement = prepareCall(sqlGetMapByID);
 	    try {
 			callStatement.setInt(1, player);
-			callStatement.setFloat(2, time);
+			callStatement.setDouble(2, time);
 			callStatement.execute();
 				
 			

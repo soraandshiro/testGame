@@ -28,5 +28,10 @@ public class timer implements ITimer{
 		
 		return this.time;
 	}
+
+	public void setTime(int i) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
